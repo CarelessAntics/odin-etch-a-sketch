@@ -1,8 +1,17 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".draw-container");
 const cellCount = 16;
+const slider = document.querySelector('#gridSize');
+const output = document.querySelector('#sizeOut');
+output.textContent = `Resolution: ${slider.value}`;
 
 
-createGrid(cellCount);
+createGrid(slider.value);
+
+slider.oninput = function () {
+    destroyGrid();
+    createGrid(this.value);
+    output.textContent = `Resolution: ${this.value}`;
+};
 
 function createGrid(gridSize) {
     for (let y = 0; y < gridSize; y++) {
@@ -17,4 +26,8 @@ function createGrid(gridSize) {
 
         container.appendChild(row);
     }
+}
+
+function destroyGrid() {
+    container.textContent = "";
 }

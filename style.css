@@ -10,7 +10,15 @@ body {
     height: 100vh;
 }
 
-.container {
+.sidebar {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.draw-container {
     display: flex;
     height: 100vh;
     aspect-ratio: 1;
@@ -19,6 +27,8 @@ body {
     align-items: stretch;
     justify-content: center;
     border: dashed red 3px;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .row {
@@ -38,4 +48,13 @@ body {
 .cell:hover {
     background-color: blue;
     transition: background-color 0s linear 0s;
+}
+
+.slider {
+    width: 99%;
+}
+
+.slider::-webkit-slider-thumb {
+    background-color: green;
+    border-radius: 25%;
 }
