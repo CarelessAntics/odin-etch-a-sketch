@@ -4,6 +4,14 @@ const slider = document.querySelector('#gridSize');
 const output = document.querySelector('#sizeOut');
 output.textContent = `Resolution: ${slider.value}`;
 
+// Extra credit: darkening effect:
+container.addEventListener('mouseover', function (event) {
+    event.stopPropagation();
+    if (event.target === this) return;
+
+    event.target.style.opacity -= .1;
+})
+
 
 createGrid(slider.value);
 
@@ -27,6 +35,7 @@ function createGrid(gridSize) {
             let B = Math.floor(Math.random() * 256);
 
             cell.style.setProperty('--rnd-background', `rgb(${R}, ${G}, ${B})`);
+            cell.style.opacity = 1;
 
             row.appendChild(cell);
         }
