@@ -43,12 +43,12 @@ body {
     border: solid black 1px;
     box-sizing: border-box;
     background-color: white;
-    transition: background-color 3s linear .3s;
+    /*transition: background-color 3s linear .3s;*/
 }
 
-.cell:hover {
+.draw {
     background-color: var(--rnd-background);
-    transition: background-color 0s linear 0s;
+    /*transition: background-color 0s linear 0s;*/
 }
 
 .slider {

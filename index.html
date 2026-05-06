@@ -9,10 +9,18 @@
 <body>
 
     <div class="sidebar">
-
-        <p>resize:</p>
-        <input type="range" min="2" max="64" value="16" class="slider" id="gridSize">
-        <p id="sizeOut">16</p>
+        <fieldset>
+            <legend>resize:</legend>
+            <input type="range" min="2" max="64" value="16" class="slider" id="gridSize">
+            <p id="sizeOut">16</p>
+        </fieldset>
+        <fieldset>
+            <legend>Extra options</legend>
+            <input type="checkbox" id="darken" name="darken">
+            <label for="darken">Darken</label>
+            <input type="checkbox" id="randomize" name="randomize">
+            <label for="randomize">Randomize</label>
+        </fieldset>
     </div>
     <div class="draw-container" id="drawContainer"></div>
     <div class="sidebar"></div>
