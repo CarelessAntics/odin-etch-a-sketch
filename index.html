@@ -8,12 +8,14 @@
 </head>
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar left">
+        <h1>Etch-a-Sketch</h1>
         <fieldset>
-            <legend>resize:</legend>
+            <legend>Resize:</legend>
             <input type="range" min="2" max="64" value="16" class="slider" id="gridSize">
             <p id="sizeOut">16</p>
         </fieldset>
+
         <fieldset>
             <legend>Extra options</legend>
             <input type="checkbox" id="darken" name="darken">
@@ -22,7 +24,11 @@
             <label for="randomize">Randomize</label>
         </fieldset>
     </div>
-    <div class="draw-container" id="drawContainer"></div>
+
+    <div class="container">
+        <div class="draw-area" id="drawArea"></div>
+    </div>
+
     <div class="sidebar"></div>
 
 </body>

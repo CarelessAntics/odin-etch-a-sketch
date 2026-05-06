@@ -8,6 +8,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset {
+    padding: 12px 24px;
+    margin-bottom: 18px;
+}
+
+legend {
+    padding: 0 8px;
 }
 
 .sidebar {
@@ -18,18 +28,38 @@ body {
     padding: 30px;
 }
 
-.draw-container {
+.left {
+    padding-left: 5%;
+}
+
+.right {
+    padding-right: 5%;
+}
+
+.container {
     display: flex;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.draw-area {
+    display: flex;
+    height: 100%;
     aspect-ratio: 1;
     flex-direction: column;
     flex: 0 0 auto;
     align-items: stretch;
     justify-content: center;
-    border: dashed red 3px;
-    padding: 30px;
+    border: dashed #888 2px;
     box-sizing: border-box;
     background-color: black;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 12px 12px 8px #aaa;
 }
 
 .row {
@@ -40,7 +70,7 @@ body {
 .cell {
     aspect-ratio: 1;
     flex: 1;
-    border: solid black 1px;
+    /*border: solid #eee .2px;*/
     box-sizing: border-box;
     background-color: white;
     /*transition: background-color 3s linear .3s;*/
@@ -53,9 +83,22 @@ body {
 
 .slider {
     width: 99%;
+    background-color: #aaa;
+    height: 8px;
+    border-radius: 4px;
+    margin: 12px 0;
+    box-shadow: 3px 3px 2px inset #888;
+}
+
+.slider::-moz-range-thumb {
+    background-color: #eee;
+    width: 12px;
+    height: 32px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 2px 2px 3px #888;
 }
 
 .slider::-webkit-slider-thumb {
-    background-color: green;
-    border-radius: 25%;
+
 }

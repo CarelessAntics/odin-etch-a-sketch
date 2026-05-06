@@ -1,4 +1,4 @@
-const container = document.querySelector(".draw-container");
+const container = document.querySelector(".draw-area");
 const slider = document.querySelector('#gridSize');
 const output = document.querySelector('#sizeOut');
 const chkDarken = document.querySelector('#darken')
@@ -14,7 +14,6 @@ container.addEventListener('mouseover', function (event) {
 
     event.target.classList.add("draw");
 });
-
 
 createGrid(slider.value);
 
