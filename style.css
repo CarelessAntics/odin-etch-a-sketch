@@ -92,6 +92,7 @@ legend {
 }
 
 .slider::-moz-range-thumb {
+    -moz-appearance: none;
     background-color: #eee;
     width: 12px;
     height: 32px;
@@ -101,5 +102,20 @@ legend {
 }
 
 .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #eee;
+    width: 12px;
+    height: 32px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 2px 2px 3px #888;
+}
 
+.slider::-ms-thumb {
+    background-color: #eee;
+    width: 12px;
+    height: 32px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 2px 2px 3px #888;
 }
