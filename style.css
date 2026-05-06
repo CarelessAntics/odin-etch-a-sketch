@@ -12,20 +12,23 @@ body {
 
 .container {
     display: flex;
+    height: 100vh;
+    aspect-ratio: 1;
     flex-direction: column;
-    flex: 0 1 0;
-    align-items: center;
+    flex: 0 0 auto;
+    align-items: stretch;
+    justify-content: center;
     border: dashed red 3px;
 }
 
 .row {
     display: flex;
+    flex: 1;
 }
 
 .cell {
-    width: 50px;
-    height: 50px;
-    flex: 0 0 auto;
+    aspect-ratio: 1;
+    flex: 1;
     border: solid black 1px;
     box-sizing: border-box;
     background-color: white;
