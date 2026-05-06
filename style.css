@@ -28,4 +28,11 @@ body {
     flex: 0 0 auto;
     border: solid black 1px;
     box-sizing: border-box;
+    background-color: white;
+    transition: background-color 3s linear .3s;
+}
+
+.cell:hover {
+    background-color: blue;
+    transition: background-color 0s linear 0s;
 }
