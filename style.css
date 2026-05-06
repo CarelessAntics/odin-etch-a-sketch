@@ -70,7 +70,7 @@ legend {
 .cell {
     aspect-ratio: 1;
     flex: 1;
-    /*border: solid #eee .2px;*/
+    border: solid #eee .2px;
     box-sizing: border-box;
     background-color: white;
     /*transition: background-color 3s linear .3s;*/

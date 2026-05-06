@@ -12,6 +12,15 @@ container.addEventListener('mouseover', function (event) {
     // Extra credit: Darken the squares while drawing
     if (chkDarken.checked) event.target.style.opacity -= .1;
 
+    // Extra credit: Randomize the colors
+    if (chkRandomize.checked) {
+        let R = Math.floor(Math.random() * 256);
+        let G = Math.floor(Math.random() * 256);
+        let B = Math.floor(Math.random() * 256);
+
+        event.target.style.setProperty('--rnd-background', `rgb(${R}, ${G}, ${B})`);
+    }
+
     event.target.classList.add("draw");
 });
 
@@ -41,12 +50,6 @@ function createGrid(gridSize) {
             let R = 104;
             let G = 255;
             let B = 204;
-
-            if (chkRandomize.checked) {
-                R = Math.floor(Math.random() * 256);
-                G = Math.floor(Math.random() * 256);
-                B = Math.floor(Math.random() * 256);
-            }
 
             cell.style.setProperty('--rnd-background', `rgb(${R}, ${G}, ${B})`);
             cell.style.opacity = 1;
