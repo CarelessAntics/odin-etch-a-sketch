@@ -21,6 +21,13 @@ function createGrid(gridSize) {
         for (let x = 0; x < gridSize; x++) {
             const cell = document.createElement('div');
             cell.classList.add("cell");
+
+            let R = Math.floor(Math.random() * 256);
+            let G = Math.floor(Math.random() * 256);
+            let B = Math.floor(Math.random() * 256);
+
+            cell.style.setProperty('--rnd-background', `rgb(${R}, ${G}, ${B})`);
+
             row.appendChild(cell);
         }
 
